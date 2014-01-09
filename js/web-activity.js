@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
+  //launchMaliciousActivity launches a 'dvfa' activity. The 'userdata' field
+  //contains the keyword 'delete', which could be used to intialize a delete
+  //action.
   function launchMaliciousActivity(e) {
     e.preventDefault();
     var activity = new MozActivity({
@@ -15,6 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
     };
   }
 
+  //launchActivityLeak launches a 'dvfa' activity. The 'secret' field contains a
+  //user's credentials. Since we cannot control who handles the 'dvfa'
+  //WebActivity, we could be potentially leaking the user's credentials to a
+  //malicious application.
   function launchActivityLeak(e) {
     var activity = new MozActivity({
       name: 'dvfa',

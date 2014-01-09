@@ -1,12 +1,6 @@
-/*In this file there are two functions that take user-supplied input and then
- * add this input to an HTML element. 
- *
- * We could also HTML entity encode the user-input for further security.
- */
-
 document.addEventListener('DOMContentLoaded', function () {
   function unSafe(e) {
-    //example: we want user-input inside a <p> tag
+    //below we use innerHTML, unsafely, to create a <p> tag
     var val = document.getElementById('user-input').value;
     document.getElementById('output').innerHTML += '<p>'
     document.getElementById('output').innerHTML += val;
@@ -14,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function safe(e) {
-    //example: we want user-input inside a <p> tag
+    //below we use textContent instead of innerHTML
     var val = document.getElementById('user-input').value;
     var p = document.createElement('p');
     p.textContent = val;

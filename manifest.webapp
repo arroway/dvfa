@@ -17,8 +17,8 @@
   },
   "locales": {
     "en-US": {
-      "name": "FxOSec",
-      "description": "An application to demonstrate security errors"
+      "name": "DVFA",
+      "description": "An application to demonstrate security vulnerabilities"
     }
   },
   "default_locale": "en-US",
