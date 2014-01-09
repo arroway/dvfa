@@ -1,0 +1,15 @@
+<p class='small'>
+Firefox OS uses a permission model to allow apps access to certain APIs. In this
+vulnerability, we see the danger of an app including an extraneous permission.
+</p><p>
+The tendency for developers is to simply add as many permissions to get their
+feature working, unfortunately there are some dangers in this. We should use
+'principle of least permissions' when applying permission to our application.
+For more information on Firefox OS permission, see our MDN page <a
+  target="_blank"
+  href="https://developer.mozilla.org/en-US/Apps/Developing/App_permissions">here</a>.
+</p>
+<p>
+
+In this example, we see the extraneous 'contacts' permission being used
+maliciously to add/delete contacts.

@@ -1,0 +1,32 @@
+{
+  "name": "DVFA",
+  "description": "Damn Vulnerable FxOS Application",
+  "type": "privileged",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Rob Fletcher (:omerta)",
+    "url": "https://blog.mozilla.org/security/"
+  },
+  "permissions": {
+    "contacts":{ "access": "readwrite" }
+  },
+  "activities": {
+    "dvfa": {
+      "disposition": "window"
+    }
+  },
+  "locales": {
+    "en-US": {
+      "name": "FxOSec",
+      "description": "An application to demonstrate security errors"
+    }
+  },
+  "default_locale": "en-US",
+  "icons": {
+    "120": "/style/logos/damn-vulnerable-logo-120.png",
+    "90": "/style/logos/damn-vulnerable-logo-90.png",
+    "60": "/style/logos/damn-vulnerable-logo-60.png"
+  },
+  "orientation": "default",
+  "messages": [ ] 
+}
