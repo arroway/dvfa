@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('next').addEventListener('click', goForward);
 
   navigator.mozSetMessageHandler('activity', function(activityRequest) {
-    console.log('trying to handle shit');
     //Web Activities: Vulnerability 1
     var option = activityRequest.source;
     if(option.data.userdata.toString() === 'delete'){
