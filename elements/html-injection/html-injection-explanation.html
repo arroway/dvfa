@@ -1,8 +1,0 @@
-<p class='small'> In this section, we misuse innerHTML in such a way that HTML injection
-is possible. Since a default CSP policy is applied, JS execution is not
-possible. Suggestions on how to avoid HTML/JS injections can be found on MDN
-<a target="_blank" href="https://developer.mozilla.org/en-US/Apps/Security_guidelines#HTML.2FJavaScript.2FCSS_injection_and_XSS">here</a>.
-</p>
-<p class='small'> For this specific vulnerability, we should build our HTML
-with DOM methods like createElement and using textContent instead of innerHTML.
-</p>

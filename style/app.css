@@ -21,13 +21,13 @@ p.large {
   line-height: 3rem;
 }
 
-p.exploit {
+p.monster {
   float:right;
   padding-right: 90px;
   padding-top: 35px;
 }
 
-p.individual-exploit {
+p.individual-monster {
   float:right;
   padding-right: 40px;
   padding-top: 20px;
@@ -50,7 +50,7 @@ p.delete {
   text-align: center;
 }
 
-img.exploit {
+img.monster {
   clear: both; 
   float: left;
   display: block;

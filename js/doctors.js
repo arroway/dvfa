@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  function getContacts(e) {
+  function getDoctors(e) {
     var contacts = window.navigator.mozContacts.getAll({});
     window.document.getElementById('output').innerHTML = '';
 
@@ -19,12 +19,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     contacts.onerror = function() {
-      console.warn("error getting contacts");
+      console.warn("error getting doctors");
     }
 
   }
 
-  function addContacts(e) {
+  function addDoctor(e) {
     window.document.getElementById('output').innerHTML = '';
     var person = new mozContact();
     person.givenName  = ["bad"];
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     saving.onsuccess = function() {
       var output = window.document.getElementById('output');
       var p = document.createElement('p');
-      p.textContent = "New contact created with givenName:bad and familyName:kitty";
+      p.textContent = "New doctor created with givenName:bad and familyName:kitty";
       p.className = 'mini';
       output.appendChild(p);
     };
@@ -44,19 +44,19 @@ document.addEventListener('DOMContentLoaded', function () {
     };
   }
 
-  function deleteContacts(e) {
+  function deleteDoctors(e) {
     window.document.getElementById('output').innerHTML = '';
     var deleted = navigator.mozContacts.clear();
     deleted.onsuccess = function() {
       var output = window.document.getElementById('output');
       var p = document.createElement('p');
-      p.textContent = "ALL contacts deleted O_O";
+      p.textContent = "ALL doctors deleted O_O";
       p.className = 'mini';
       output.appendChild(p);
     }
   }
 
-  document.getElementById('contacts').addEventListener('click', getContacts);
-  document.getElementById('add-contact').addEventListener('click', addContacts);
-  document.getElementById('delete-contact').addEventListener('click', deleteContacts);
+  document.getElementById('doctors').addEventListener('click', getDoctors);
+  document.getElementById('add-doctor').addEventListener('click', addDoctor);
+  document.getElementById('delete-doctor').addEventListener('click', deleteDoctors);
 });

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  function unSafe(e) {
+  function alertalert(e) {
     //below we use innerHTML, unsafely, to create a <p> tag
     var val = document.getElementById('user-input').value;
     document.getElementById('output').innerHTML += '<p>'
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('output').innerHTML += '</p>'
   }
 
-  function safe(e) {
+  function exterminate(e) {
     //below we use textContent instead of innerHTML
     var val = document.getElementById('user-input').value;
     var p = document.createElement('p');
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('output').innerHTML='';
   }
 
-  document.getElementById('unsafe').addEventListener('click', unSafe);
-  document.getElementById('safe').addEventListener('click', safe);
+  document.getElementById('alertalert').addEventListener('click', alertalert);
+  document.getElementById('exterminate').addEventListener('click', exterminate);
   document.getElementById('clear').addEventListener('click', clear);
 });

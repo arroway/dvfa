@@ -8,7 +8,8 @@
     "url": "https://blog.mozilla.org/security/"
   },
   "permissions": {
-    "contacts":{ "access": "readwrite" }
+    "contacts":{ "access": "readwrite" },
+    "systemXHR":{}
   },
   "activities": {
     "dvfa": {
