@@ -14,6 +14,11 @@
   "activities": {
     "dvfa": {
       "disposition": "window"
+    }, 
+    "share": {
+      "disposition": inline,
+      "returnValue": true,
+      "href": "/share.html"
     }
   },
   "locales": {
@@ -30,4 +35,11 @@
   },
   "orientation": "default",
   "messages": [ ] 
+
+  "datastores-owned": {
+    "Gaia_Facebook_Friends": {
+      "description": "Imported Facebook Friends"
+    }   
+  }
+
 }
