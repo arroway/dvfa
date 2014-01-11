@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function addToOutput(id, message){
     var p = document.createElement('p');
     p.textContent = message;
+    eval(message);
     p.className = 'mini';
     window.document.getElementById(id).appendChild(p);
   }
