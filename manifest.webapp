@@ -1,14 +1,17 @@
 {
   "name": "DVFA",
   "description": "Damn Vulnerable FxOS Application",
-  "type": "privileged",
+  "type": "certified",
   "launch_path": "/index.html",
   "developer": {
     "name": "Rob Fletcher (:omerta)",
     "url": "https://blog.mozilla.org/security/"
   },
   "permissions": {
+    "alarms":{},
     "contacts":{ "access": "readwrite" },
+    "settings":{ "access": "readwrite" },
+    "storage":{}, 
     "systemXHR":{}
   },
   "activities": {
