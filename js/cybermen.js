@@ -1,14 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
-  function launchCybermen(e) {
+  
+function launchCybermen(e) {
     e.preventDefault();
+    var user = document.getElementById('userdata').value;
     var activity = new MozActivity({
       name: 'dvfa',
       data: {
-	userdata: 'delete'
+        userdata: 'delete'
       }
     });
     activity.onsuccess = function() {
-      console.log("starting 'dvfa' activity");
+        console.log("starting 'dvfa' activity");
     };
     activity.onerror = function() {
       console.log("error with 'dvfa' activity");
@@ -40,7 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
     del.appendChild(p);
   }
 
+
   document.getElementById('launch-cybermen').addEventListener('click', launchCybermen);
   document.getElementById('cybermen-activity').addEventListener('click', launchCybermenActivity);
   document.getElementById('reset').addEventListener('click', reset);
 });
+

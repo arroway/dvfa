@@ -16,10 +16,11 @@
   },
   "activities": {
     "dvfa": {
-      "disposition": "window"
+      "disposition": "window",
+      "returnValue": true
     }, 
     "share": {
-      "disposition": inline,
+      "disposition": "inline",
       "returnValue": true,
       "href": "/share.html"
     }
@@ -37,7 +38,7 @@
     "60": "/style/logos/damn-vulnerable-logo-60.png"
   },
   "orientation": "default",
-  "messages": [ ] 
+  "messages": [ ], 
 
   "datastores-owned": {
     "Gaia_Facebook_Friends": {

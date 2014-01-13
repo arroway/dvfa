@@ -6,15 +6,15 @@ document.addEventListener('DOMContentLoaded', function () {
     contacts.onsuccess = function(event) {
       var cursor = event.target;
       if (cursor.result) {
-	var id = cursor.result.id;
-	var givenName = cursor.result.givenName;
-	var familyName = cursor.result.familyName;
-	var output = window.document.getElementById('output');
-	var p = document.createElement('p');
-	p.textContent = "ID:" + id.toString() + " with givenName:" + givenName.toString() + " and familyName:" + familyName.toString() + ".";
-	p.className = 'mini';
-	output.appendChild(p);
-	cursor.continue();
+        var id = cursor.result.id;
+	      var givenName = cursor.result.givenName;
+	      var familyName = cursor.result.familyName;
+	      var output = window.document.getElementById('output');
+	      var p = document.createElement('p');
+	      p.textContent = "ID:" + id.toString() + " with givenName:" + givenName.toString() + " and familyName:" + familyName.toString() + ".";
+	      p.className = 'mini';
+	      output.appendChild(p);
+	      cursor.continue();
       }
     }
 
@@ -27,14 +27,14 @@ document.addEventListener('DOMContentLoaded', function () {
   function addDoctor(e) {
     window.document.getElementById('output').innerHTML = '';
     var person = new mozContact();
-    person.givenName  = ["bad"];
-    person.familyName = ["kitty"];
+    person.givenName  = ["Doctor"];
+    person.familyName = ["Who"];
     var saving = navigator.mozContacts.save(person);
 
     saving.onsuccess = function() {
       var output = window.document.getElementById('output');
       var p = document.createElement('p');
-      p.textContent = "New doctor created with givenName:bad and familyName:kitty";
+      p.textContent = "New doctor created with givenName:Doctor and familyName:Who";
       p.className = 'mini';
       output.appendChild(p);
     };
