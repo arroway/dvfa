@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
   function addToOutput(id, message){
     var p = document.createElement('p');
     p.textContent = message;
-    eval(message);
     p.className = 'mini';
     window.document.getElementById(id).appendChild(p);
   }
@@ -25,13 +24,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if(option.data.userdata.toString() === 'delete'){
       var del = window.document.getElementById("to-delete");
       del.innerHTML = '';
-      addToOutput("cybermen-output", "uh-oh, unauthorized WebActivity deleted stuff");
+      addToOutput("web-activity-output", "uh-oh, unauthorized WebActivity deleted stuff");
     }
-    
     if (option.name === "dvfa") {
-      if(option.data.userdata.toString() == 'info-leak'){
-	      addToOutput("cybermen-output", "uh-oh, we got this secret '" + option.data.secret.toString() + "'");
+      if(option.data.userdata.toString() === 'delete'){
+        console.log("WebActivity Vuln 1: this is where we should've deleted");
       }
+    }
+
+    if(option.data.userdata.toString() == 'info-leak'){
+	    addToOutput("web-activity-output", "uh-oh, we got this secret '" + option.data.secret.toString() + "'");
     }
   });
 });

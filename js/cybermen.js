@@ -1,28 +1,27 @@
 document.addEventListener('DOMContentLoaded', function () {
-  
-function launchCybermen(e) {
+  function launchCybermenActivity(e) {
     e.preventDefault();
-    var user = document.getElementById('userdata').value;
+    var userinput = document.getElementById('user-input').value;
     var activity = new MozActivity({
       name: 'dvfa',
       data: {
-        userdata: 'delete'
+	userdata: userinput
       }
     });
     activity.onsuccess = function() {
-        console.log("starting 'dvfa' activity");
+      console.log("starting 'dvfa' activity");
     };
     activity.onerror = function() {
       console.log("error with 'dvfa' activity");
     };
   }
 
-  function launchCybermenActivity(e) {
+  function launchActivity(e) {
     var activity = new MozActivity({
       name: 'dvfa',
       data: {
 	userdata: 'info-leak',
-	secret: 'emotions inhibitor code'
+	secret: 'credentials O_O'
       }
     });
     activity.onsuccess = function() {
@@ -34,7 +33,7 @@ function launchCybermen(e) {
   }
 
   function reset() {
-    window.document.getElementById('cybermen-output').innerHTML = '';
+    window.document.getElementById('web-activity-output').innerHTML = '';
     var del = window.document.getElementById('to-delete');
     var p = document.createElement('p');
     p.className = 'delete';
@@ -42,9 +41,7 @@ function launchCybermen(e) {
     del.appendChild(p);
   }
 
-
-  document.getElementById('launch-cybermen').addEventListener('click', launchCybermen);
   document.getElementById('cybermen-activity').addEventListener('click', launchCybermenActivity);
+  document.getElementById('launch-activity').addEventListener('click', launchActivity);
   document.getElementById('reset').addEventListener('click', reset);
 });
-
